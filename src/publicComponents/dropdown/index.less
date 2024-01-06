@@ -1,0 +1,64 @@
+.o {
+  &-dropdown {
+    min-width: 128;
+    padding: 16px 36px;
+    font-weight: bold;
+    color: #9b9faf !important;
+    text-align: center;
+
+    :deep(svg) {
+      width: 15px;
+      height: 15px;
+      margin-left: 3px;
+      font-weight: 600;
+    }
+
+    .icon {
+      margin-left: 8px;
+    }
+
+    &--large {
+      min-width: 154px;
+      padding: 16px 36px;
+
+      .el-button > span {
+        line-height: 24px;
+      }
+    }
+
+    &--medium {
+      min-width: 128px;
+      padding: 13px 29px;
+
+      .el-button > span {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    &--small {
+      min-width: 110px;
+      padding: 10px 25px;
+
+      .el-button > span {
+        font-size: 12px;
+        line-height: 20px;
+      }
+    }
+
+    &--default {
+      min-width: 154px;
+      padding: 16px 36px;
+
+      .el-button > span {
+        line-height: 22px;
+      }
+    }
+  }
+
+  :deep(.el-dropdown__list) {
+    :deep(.el-dropdown-menu) {
+      background-color: firebrick;
+    }
+  }
+}

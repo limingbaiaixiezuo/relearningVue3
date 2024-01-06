@@ -1,0 +1,73 @@
+.o {
+  :deep(.el-input__wrapper) {
+    min-width: 240px;
+    min-height: 48px;
+    font-size: 12px;
+    font-weight: bold !important;
+    line-height: 26px;
+  }
+
+  &-select {
+    // .el-input__inner {
+    // color: #00174c;
+    // }
+
+    :deep(.el-tag) {
+      border-color: #dcdfe6 !important;
+    }
+
+    :deep(.el-select__tags) {
+      height: 27px;
+    }
+
+    :deep(.el-select__input) {
+      height: 0;
+    }
+
+    :deep(.el-select__tags-text) {
+      font-weight: bold;
+      color: #606266;
+      border-color: black;
+    }
+
+    .el-tag .el-tag__close {
+      display: flex;
+      align-items: center;
+      text-align: center;
+
+      &:hover {
+        background: var(--o-text-color-3);
+      }
+    }
+
+    :deep(.el-select-dropdown__wrap) {
+      max-height: 250px;
+      overflow-y: scroll !important;
+    }
+
+    :deep(.select-trigger) {
+      min-width: 218px;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 22px;
+      text-align: left;
+    }
+
+    &--large {
+      :deep(.el-input__wrapper) {
+        min-width: 280px;
+        min-height: 56px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 36px;
+      }
+    }
+  }
+}
+
+div.el-popper.el-select__popper {
+  overflow: hidden;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 2px 5px rgb(125 125 182 / 10%);
+}

@@ -1,0 +1,72 @@
+:root {
+  --o-badge-size: 16px;
+  --o-badge-color: var(--o-white);
+  --o-badge-padding: 0 3px;
+  --o-badge-font-size: var(--o-font-size-sm);
+  --o-badge-font-weight: var(--o-font-bold);
+  --o-badge-border-width: var(--o-border-width);
+  --o-badge-background: var(--o-danger-color);
+  --o-badge-dot-color: var(--o-danger-color);
+  --o-badge-dot-size: 8px;
+  --o-badge-font: -apple-system-font, helvetica neue, arial, sans-serif;
+}
+
+.o-badge {
+  box-sizing: border-box;
+  display: inline-block;
+  min-width: var(--o-badge-size);
+  padding: var(--o-badge-padding);
+  font-family: var(--o-badge-font);
+  font-size: var(--o-badge-font-size);
+  font-weight: var(--o-badge-font-weight);
+  line-height: 1.2;
+  color: var(--o-badge-color);
+  text-align: center;
+  background: var(--o-badge-background);
+  border: var(--o-badge-border-width) solid var(--o-background-2);
+  border-radius: var(--o-radius-max);
+
+  &--fixed {
+    position: absolute;
+    transform-origin: 100%;
+  }
+
+  &--top-left {
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &--top-right {
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+  }
+
+  &--bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+  }
+
+  &--bottom-right {
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, 50%);
+  }
+
+  &--dot {
+    width: var(--o-badge-dot-size);
+    min-width: 0;
+    height: var(--o-badge-dot-size);
+    padding: 0;
+    background: var(--o-badge-dot-color);
+    border: none;
+    border-radius: 100%;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: inline-block;
+  }
+}

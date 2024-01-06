@@ -1,0 +1,72 @@
+.o-avatar {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+
+  &__Popover {
+    position: relative;
+    z-index: 9999 !important;
+  }
+
+  .o-badge {
+    font-size: var(--o-font-size-md);
+    background: none;
+    border: none;
+
+    &--top-left {
+      transform: translate(-50%, -42%);
+    }
+  }
+
+  &__img {
+    width: 86%;
+    height: 86%;
+    border: 2PX solid var(--o-white);
+    border-radius: 50%;
+  }
+
+  &--online {
+    .o-avatar__img {
+      border-color: var(--o-green);
+    }
+  }
+
+  &__info,
+  &__email {
+    padding: var(--o-padding-xs);
+    color: var(--o-text-color-5);
+  }
+
+  &__info {
+    display: flex;
+    font-size: var(--o-font-size-md);
+    border-bottom: 1px solid var(--o-gray-12);
+
+    img {
+      width: 36PX;
+      height: 36PX;
+      border-radius: 50%;
+    }
+
+    &-name {
+      width: 120px;
+      height: 36px;
+      padding-left: 6px;
+      overflow: hidden;
+      line-height: 32px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
+  &__email {
+    padding: var(--o-padding-xs);
+    font-size: var(--o-font-size-sm);
+
+    .icon {
+      margin-right: 10px;
+      margin-left: 8px;
+      color: var(--o-text-color-4);
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.o {
+  &-alert {
+    min-width: 400px;
+    height: 36px;
+    padding: 7px 20px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 22px;
+    border-radius: 4px;
+
+    &--info {
+      color: #333 !important;
+      background-color: #f4f4f5 !important;
+    }
+
+    &--success {
+      color: #34ba50 !important;
+      background-color: #f0f9eb !important;
+    }
+
+    &--warning {
+      .is-light {
+        color: #e6a23c !important;
+        background-color: #fdf6ec !important;
+      }
+    }
+
+    &--error {
+      .is-light {
+        color: #f56c6c !important;
+        background-color: #fef0f0 !important;
+      }
+    }
+  }
+}

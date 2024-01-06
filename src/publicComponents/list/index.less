@@ -1,0 +1,29 @@
+:root {
+  --o-list-text-color: var(--o-text-color-2);
+  --o-list-text-font-size: var(--o-font-size-md);
+  --o-list-text-line-height: 50px;
+  --o-list-loading-icon-size: 16px;
+}
+
+.o-list {
+  &__loading,
+  &__finished-text,
+  &__error-text {
+    font-size: var(--o-list-text-font-size);
+    line-height: var(--o-list-text-line-height);
+    color: var(--o-list-text-color);
+    text-align: center;
+  }
+
+  &__placeholder {
+    height: 0;
+    pointer-events: none;
+  }
+
+  &__loading-icon {
+    .o-loading__spinner {
+      width: var(--o-list-loading-icon-size);
+      height: var(--o-list-loading-icon-size);
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.conditional-filling {
+  position: relative;
+  height: 100%;
+  padding: 0 4PX;
+  padding-bottom: 40PX;
+  font-size: 14PX;
+
+  &__content {
+    max-height: 280PX;
+    padding: 10PX 0;
+    padding: 0 20PX;
+    overflow: hidden auto;
+
+    &::-webkit-scrollbar {
+      width: 6PX;
+    }
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 8PX);
+    height: 40PX;
+    padding: 0 20PX;
+
+    &-add {
+      position: absolute;
+      top: 50%;
+      height: 30PX;
+      padding: 0 10PX;
+      line-height: 30PX;
+      cursor: pointer;
+      border-radius: 4px;
+      transform: translateY(-50%);
+
+      &-icon {
+        margin-right: 4PX;
+      }
+
+      &:hover {
+        color: var(--o-primary-color);
+        background-color: rgba(234, 76, 137, 0.1);
+      }
+    }
+  }
+}

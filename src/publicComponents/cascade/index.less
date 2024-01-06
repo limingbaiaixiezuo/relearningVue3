@@ -1,0 +1,21 @@
+.o {
+  &-cascade {
+    &--large {
+      min-width: 280px;
+      height: 56px;
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 24px;
+    }
+  }
+
+  :deep(.el-cascade-menu__warp, .el-scrollbar__wrap) {
+    height: auto !important;
+    background-color: aqua;
+  }
+}
+
+:deep(.el-cascade-menu__warp, .el-scrollbar__wrap) {
+  height: auto !important;
+  background-color: red;
+}

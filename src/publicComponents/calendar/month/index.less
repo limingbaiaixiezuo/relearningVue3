@@ -1,0 +1,177 @@
+// stylelint-disable
+
+
+.months {
+  min-height: 450px;
+  width: 100%;
+  position: relative;
+
+  .task {
+    position: absolute;
+    z-index: 1;
+
+    &.draggable>.list {
+      cursor: auto;
+
+      &:hover {
+        border-color: #FF9800;
+      }
+    }
+
+    &.endClose>.list {
+      margin-right: 0;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.startClose>.list {
+      margin-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &.isMove {
+      z-index: 2;
+    }
+
+    .warning {
+      position: absolute;
+      right: 8px;
+      top: 4px;
+    }
+  }
+}
+
+.list {
+  cursor: pointer;
+  position: relative;
+  padding: 0px 8px;
+  margin: 0px 6px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: rgb(38, 38, 38);
+  min-height: 24px;
+  overflow: hidden;
+  line-height: 28PX;
+  font-size: 12px;
+  border: 1px solid transparent;
+  background: #FFEACC;
+
+  &:hover {
+    border: 1px solid #FF9800;
+  }
+}
+
+.left-resize,
+.right-resize {
+  user-select: none;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 16px;
+  cursor: col-resize;
+}
+
+.left-resize {
+  left: 0;
+}
+
+.right-resize {
+  right: 0;
+}
+
+
+.day {
+  flex: 1;
+  height: 100%;
+  border-left: 1px solid #ccc;
+  position: relative;
+}
+
+
+.more {
+  max-height: 560px;
+  width: 240px;
+  margin: -12px -16px;
+  color: #333;
+
+  header {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 48px;
+    align-items: center;
+    padding: 0 12px;
+    justify-content: space-between;
+  }
+}
+
+.more-list {
+  width: 240px;
+
+  .moreList {
+    overflow-y: overlay !important;
+  }
+
+  .list {
+    cursor: pointer;
+    position: relative;
+    margin: 0px 6px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 13px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background-color: #FFEACC;
+    color: #333;
+    margin: 0 6px;
+
+   
+  }
+}
+.more-task {
+  font-size: 12px;
+  color: rgb(140, 140, 140);
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  margin-left: 8px;
+  width: max-content; 
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  text-decoration-line: none;
+}
+
+
+.more-header {
+  margin-left: 8px;
+}
+
+
+.drawer {
+  &.taskMobileModal {
+    .ant-drawer-content {
+      background: #fff;
+      border-radius: 16px 16px 0 0;
+    }
+
+    .ant-drawer-body {
+      padding: 8px 16px;
+    }
+
+    .ant-drawer-header {
+      background: #fff;
+      border: 0;
+    }
+  }
+}
+
+.List-item {
+  padding: 0 8px;
+}

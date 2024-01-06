@@ -1,0 +1,66 @@
+.group-config {
+  position: relative;
+  height: 100%;
+  padding: 0 4PX;
+  padding-bottom: 40PX;
+  font-size: 14PX;
+
+  &__hide-footer {
+    padding-bottom: 0;
+  }
+
+  &__footer {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 8PX);
+    height: 36PX;
+    padding: 0 20PX;
+
+    &-add {
+      flex: 1;
+      height: 100%;
+      margin-right: 10PX;
+
+      & > .el-select-v2 {
+        flex: 1;
+        height: 100%;
+        font-size: 13PX;
+
+        .el-select-dropdown__option-item {
+          font-size: 13PX;
+        }
+
+        .el-select-v2__wrapper {
+          height: 100%;
+          font-size: 13PX;
+
+          .el-select-v2__combobox-input {
+            height: 100% !important;
+            font-size: 13PX;
+          }
+        }
+      }
+    }
+
+    &::after {
+      display: block;
+      flex: 2;
+      height: 100%;
+      margin-right: 70PX;
+      content: '';
+    }
+  }
+
+  &__content {
+    max-height: 280PX;
+    padding: 10PX 0;
+    padding: 0 20PX;
+    overflow: hidden auto;
+
+    &::-webkit-scrollbar {
+      width: 6PX;
+    }
+  }
+}

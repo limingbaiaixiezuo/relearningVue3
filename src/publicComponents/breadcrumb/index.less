@@ -1,0 +1,106 @@
+.o-breadcrumb {
+  &__container {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    font-size: var(--o-font-size-lm);
+    color: var(--o-text-color-5);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__show {
+    display: flex;
+    flex: 0 10 auto;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 48px;
+
+    &__render-crumb-btn {
+      min-width: 28px;
+      padding: 0 4px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: top;
+      cursor: pointer;
+    }
+
+    &__render-crumb-btn-separator {
+      min-width: 10px;
+      margin: 0 5px;
+      color: var(--o-text-color-5);
+    }
+
+    &:hover:not(:last-child) {
+      .o-breadcrumb__show__render-crumb-btn {
+        background-color: var(--o-gray-12);
+      }
+    }
+
+    &:last-child {
+      display: inline-flex;
+      flex: 1 1 auto;
+      align-items: center;
+      padding-right: 0;
+      color: var(--text-title);
+      -webkit-box-flex: 1;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+
+      .o-breadcrumb__show__render-crumb-btn {
+        cursor: default;
+      }
+
+      .o-breadcrumb__show__render-crumb-btn-separator {
+        display: none;
+      }
+    }
+
+    &:first-child {
+      .o-breadcrumb__show__render-crumb-btn {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__hide-crumb-btn {
+    max-width: 200px;
+    padding: 4px 6px;
+    margin: 4px 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--o-gray-12);
+    }
+  }
+
+  &__info {
+    display: flex;
+    padding: var(--o-padding-xs);
+    font-size: var(--o-font-size-md);
+    color: var(--o-text-color-5);
+    cursor: pointer;
+    border-bottom: 1px solid var(--o-gray-12);
+
+    &-name {
+      max-width: 500px;
+      height: 32px;
+      padding-left: 6px;
+      overflow: hidden;
+      line-height: 28px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
