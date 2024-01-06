@@ -1,9 +1,15 @@
-<script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
-</script>
+
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="hello">
+    hello vue3
+  </div>
 </template>
+<script setup lang="ts">
+</script>
+<style lang="less" scoped>
+.hello {
+  color: red;
+  font-size: large;
+}
+</style>

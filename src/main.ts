@@ -10,10 +10,11 @@ import ElementPlus from 'element-plus'
 // collapse
 import { ElCollapseTransition } from 'element-plus'
 // fade/zoom
-import 'element-plus/lib/theme-chalk/base.css'
+// import 'element-plus/lib/theme-chalk/base.css'
 
 
 const app = createApp(App)
+globalThis.vueApp = app;
 
 app.use(createPinia())
 app.use(router)

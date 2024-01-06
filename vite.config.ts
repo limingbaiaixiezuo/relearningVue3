@@ -8,8 +8,6 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
-import less from 'vite-plugin-less'
-
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -21,13 +19,22 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
-    less({
-      javascriptEnabled: true
-    })
+    
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  css: {
+    preprocessorOptions: {
+      less: {
+        // 你可以在这里添加 Less 的全局变量等
+        modifyVars: {
+          'primary-color': '#ff4757',
+        },
+        javascriptEnabled: true,
+      },
+    },
+  },
 })
