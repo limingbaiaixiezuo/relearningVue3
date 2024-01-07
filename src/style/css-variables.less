@@ -1,0 +1,199 @@
+/* light主题 */
+:root {
+  // Color Palette
+  --o-black: #000;
+  --o-white: #fff;
+  --o-gray-1: #fafafb;
+  --o-gray-2: #f2f3f5;
+  --o-gray-3: #ebedf0;
+  --o-gray-4: #dcdee0;
+  --o-gray-5: #c8c9cc;
+  --o-gray-6: #969799;
+  --o-gray-7: #646566;
+  --o-gray-8: #323233;
+  --o-gray-9: #666b80;
+  --o-gray-10: #00174c;
+  --o-gray-11: #d1d4e4cc;
+  /* stylelint-disable-next-line color-hex-case */
+  --o-gray-12: #f0f0f2;
+  --o-gray-13: #f5f5f5;
+  --o-gray-14: #f2f2f2;
+  --gray-13: #a8abb2;
+  --gray-14: #f5f7fa;
+  --gray-15: #f7f7fb;
+  --gray-16: #eaedf0;
+  --gray-17: #f8f8f9;
+  --gray-18: #999eb514;
+  --gray-19: #fcf7f1;
+  --gray-20: #f9f1f5;
+  --gray-21: #9b9faf;
+  --gray-22: #424656;
+  --gray-23: #d9dde9;
+  --gray-24: #606266;
+  --gray-25: #f2f2fa;
+  --gray-26: #f9f9fb;
+  --gray-27: #1a1a1a;
+  --gray-28: #ededed;
+  --gray-29: #fafafa;
+  --gray-30: #f6f7f9;
+  --gray-31: #e3e6ed;
+  --o-red: #ee0a24;
+  --o-blue: #1989fa;
+  --o-blue2: #4466d1;
+  --o-pink: #ea4c89;
+  --o-pink-2: #fef6f9;
+  --o-orange: #ff976a;
+  --o-orange-dark: #ed6a0c;
+  --o-orange-light: #fffbe8;
+  --o-green: #07c160;
+  --cancel-background-image: url('@/icons/call-offP.svg');
+
+  // Gradient Colors
+  --o-gradient-red: linear-gradient(to right, #ff6034, #ee0a24);
+  --o-gradient-orange: linear-gradient(to right, #ffd01e, #ff8917);
+
+  // Component Colors
+  --o-primary-color: var(--o-pink);
+  --o-primary-color-2: var(--o-pink-2);
+  --o-success-color: var(--o-green);
+  --o-danger-color: var(--o-red);
+  --o-warning-color: var(--o-orange);
+  --o-text-color: var(--o-gray-8);
+  --o-text-color-2: var(--o-gray-6);
+  --o-text-color-3: var(--o-gray-5);
+  --o-text-color-4: var(--o-gray-9);
+  --o-text-color-5: var(--o-gray-10);
+  --o-text-color-6: var(--o-blue2);
+  --o-active-color: var(--o-gray-2);
+  --o-active-opacity: 0.6;
+  --o-disabled-opacity: 0.5;
+  --o-background: var(--o-gray-1);
+  --o-background-2: var(--o-white);
+  --o-background-3: var(--o-white);
+
+  // Padding
+  --o-padding-base: 4px;
+  --o-padding-xs: 8px;
+  --o-padding-sm: 12px;
+  --o-padding-md: 16px;
+  --o-padding-ml: 20px;
+  --o-padding-lg: 24px;
+  --o-padding-xl: 32px;
+
+  // Font
+  --o-font-bold: 600;
+  --o-font-size-xs: 10px;
+  --o-font-size-sm: 12px;
+  --o-font-size-md: 14px;
+  --o-font-size-lg: 16px;
+  --o-font-size-lm: 18px;
+  --o-font-size-xl: 21px;
+  --o-line-height-xs: 14px;
+  --o-line-height-sm: 18px;
+  --o-line-height-md: 20px;
+  --o-line-height-lg: 22px;
+  /* stylelint-disable */
+  --o-base-font: -apple-system, BlinkMacSystemFont, 'Helvetica Neue',
+    Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui',
+    'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  --o-price-font: avenir-heavy, 'PingFang SC', helvetica neue, arial,
+    sans-serif;
+  /* stylelint-enable */
+
+  // Animation
+  --o-duration-base: 0.3s;
+  --o-duration-fast: 0.2s;
+  --o-ease-out: ease-out;
+  --o-ease-in: ease-in;
+
+  // Border
+  --o-border-color: var(--o-gray-11);
+  --o-border-color2: var(--o-gray-12);
+  --o-border-width: 1px;
+  --o-radius-sm: 2px;
+  --o-radius-md: 4px;
+  --o-radius-lg: 8px;
+  --o-radius-max: 999px;
+}
+
+/* dark主题 */
+:root[theme='dark'] {
+  // Color Palette
+  --o-black: #9a9eb3;
+  --o-white: #272b3a;
+  --o-gray-1: #323645;
+  --o-gray-2: #f2f3f5;
+  --o-gray-3: #ebedf0;
+  --o-gray-4: #424656;
+  --o-gray-5: #c8c9cc;
+  --o-gray-6: #969799;
+  --o-gray-7: #646566;
+  --o-gray-8: var(--o-gray-9);
+  --o-gray-9: #b4b8ca;
+  --o-gray-10: #dbe1ff;
+  --o-gray-11: var(--o-gray-4);
+  /* stylelint-disable-next-line color-hex-case */
+  --o-gray-12: var(--o-gray-4);
+  --o-gray-13: #323645;
+  --o-gray-14: var(--o-gray-7);
+  --gray-13: var(--o-white);
+  --gray-14: #312d3e;
+  --gray-15: #383c4b;
+  --gray-16: #666b80;
+  --gray-17: #34394c;
+  --gray-18: #999eb514;
+  --gray-19: var(--o-gray-4);
+  --gray-20: #3b3748;
+  --gray-21: #cfd2df;
+  --gray-22: var(--o-gray-10);
+  --gray-23: #77787a;
+  --gray-24: var(--o-gray-10);
+  --gray-25: #2f3545;
+  --gray-26: var(--o-white);
+  --gray-27: var(--o-gray-10);
+  --gray-28: var(--gray-16);
+  --gray-29: var(--gray-17);
+  --gray-30: var(--gray-17);
+  --gray-31: var(--gray-17);
+  --o-red: #ee0a24;
+  --o-blue: #1989fa;
+  --o-blue2: #4466d1;
+  --o-pink: #ea4c89;
+  --o-pink-2: var(--gray-14);
+  --o-orange: #ff976a;
+  --o-orange-dark: #ed6a0c;
+  --o-orange-light: #fffbe8;
+  --o-green: #07c160;
+  --o-text-color: #dbe1ff;
+  --o-text-color-4: #8e92a3;
+  --o-text-color-6: var(--o-gray-10);
+}
+
+:root[color='pink'] {
+  --o-pink: #ea4c89;
+}
+
+:root[color='yellow'] {
+  --o-pink: #fecf53;
+  // --o-pink-2: #fecf530d;
+  --o-pink-2: rgba(245, 221, 155, 0.2);
+  --cancel-background-image: url('@/icons/call-offY.svg');
+}
+
+:root[color='blue'] {
+  --o-pink: #4466d1;
+  // --o-pink-2: #4466d10d;
+  --o-pink-2: rgba(227, 230, 250, 0.2);
+  --cancel-background-image: url('@/icons/call-offB.svg');
+}
+
+.van-theme-dark {
+  --o-text-color: #f5f5f5;
+  --o-text-color-2: #707070;
+  --o-text-color-3: #4d4d4d;
+  --o-border-color: #3a3a3c;
+  --o-active-color: #3a3a3c;
+  --o-background: #000;
+  --o-background-2: #1c1c1e;
+  --o-background-3: #37363b;
+}

@@ -16,8 +16,6 @@ export const isString = (val) => typeof val === 'string';
 
 export const isNumeric = (val) => typeof val === 'number' || numberRegex.test(val);
 
-export const isSSR = () => globalThis.SSR;
-
 export const isArray = (arr) => Object.prototype.toString.call(arr) === '[object Array]';
 
 export const isJSON = (str) => { try { JSON.parse(str); return true; } catch (err) { return false; } };

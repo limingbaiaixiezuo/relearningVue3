@@ -98,7 +98,7 @@ export function downLoadAll(fileName, url) {
   var x = new XMLHttpRequest();
   x.open('GET', url, true);
   x.responseType = 'blob';
-  x.onload = function(e) {
+  x.onload = function() {
     var blob = x.response;
     if ('msSaveOrOpenBlob' in navigator) {
       // IE导出
