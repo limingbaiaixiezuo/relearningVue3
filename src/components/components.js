@@ -1,5 +1,4 @@
 export { default as SvgIcon } from './svg-icon/index.vue';
-export { default as ProtectiveFooter } from './protective-footer/index.vue';
 export { default as TextView } from './text/index.vue';
 export {default as MemberAvatar} from './member-avatar/index.vue';
 export {default as ColorDrop} from '@/components/tag-status-item/ColorDrop.vue';

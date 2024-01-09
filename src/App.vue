@@ -28,7 +28,7 @@ body {
   overscroll-behavior: contain;
   font-family: lato, pingfangsc-regular, 'Microsoft YaHei', sans-serif, 'San Francisco';
   // background-color: var(--o-white);
-  background-color: rgb(202, 240, 240);
+  // background-color: rgb(202, 240, 240);
 }
 
 input {
