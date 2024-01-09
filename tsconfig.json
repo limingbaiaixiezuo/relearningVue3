@@ -12,10 +12,12 @@
     }
   ],
   "compilerOptions": {
+    "strictNullChecks": true,
     "types": ["element-plus/global"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "jsx": "preserve"
   }
 }

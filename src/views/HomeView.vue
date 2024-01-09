@@ -1,17 +1,18 @@
 
 
 <template>
-  <!-- <div class="hello"> -->
-    <!-- hello vue3 -->
+  <div class="hello">
+    hello vue3
       <!-- <OBreadcrumbItem to="/">首页</OBreadcrumbItem>
       <OBreadcrumbItem to="/about">关于</OBreadcrumbItem>
       <OBreadcrumbItem to="/home">主页</OBreadcrumbItem> -->
-      <OBreadcrumb
+      <!-- <OBreadcrumb
         items={items.value}
         onJump={handleClick}
         separator="/"
-      />
-  <!-- </div> -->
+      /> -->
+      <ElButton type="primary">按钮</ElButton>
+  </div>
 </template>
 <script setup lang="ts">
 import { OBreadcrumb } from '@/components';
