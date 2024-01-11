@@ -11,13 +11,41 @@
       "path": "./tsconfig.vitest.json"
     }
   ],
+  // "compilerOptions": {
+  //   "strictNullChecks": true,
+  //   "types": ["element-plus/global"],
+  //   "baseUrl": ".",
+  //   "paths": {
+  //     "@/*": ["src/*"]
+  //   },
+  //   "jsx": "preserve"
+  // }
   "compilerOptions": {
-    "strictNullChecks": true,
-    "types": ["element-plus/global"],
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "experimentalDecorators": true,
+    "allowJs": true,
     "baseUrl": ".",
     "paths": {
+      // "@mg/*": ["../mg-*"]
       "@/*": ["src/*"]
-    },
-    "jsx": "preserve"
-  }
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ]
 }

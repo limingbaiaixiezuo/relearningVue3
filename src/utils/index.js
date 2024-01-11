@@ -9,7 +9,44 @@ export * from './gzip';
 export * from './resource';
 export * from './asyncLock';
 export * from './search';
+// export function createNamespace(name, noPrefix = false) {
+//   const prefixName = noPrefix ? name : `o-${name}`;
+//   return [
+//     prefixName,
+//     createBEM(prefixName)
+//   ];
+// }
 
+// function genBem(name, mods) {
+//   if (!mods) {
+//     return '';
+//   }
+
+//   if (typeof mods === 'string') {
+//     return ` ${name}--${mods}`;
+//   }
+
+//   if (Array.isArray(mods)) {
+//     return mods.reduce((ret, item) => ret + genBem(name, item), '');
+//   }
+
+//   return Object.keys(mods).reduce(
+//     (ret, key) => ret + (mods[key] ? genBem(name, key) : ''),
+//     ''
+//   );
+// }
+// export function createBEM(name) {
+//   return (el, mods) => {
+//     if (el && typeof el !== 'string') {
+//       mods = el;
+//       el = '';
+//     }
+
+//     el = el ? `${name}__${el}` : name;
+
+//     return `${el}${genBem(el, mods)}`;
+//   };
+// }
 
 export function pick(obj, keys, ignoreUndefined) {
   return keys.reduce((acc, key) => {

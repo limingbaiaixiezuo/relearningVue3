@@ -17,14 +17,17 @@
   "dependencies": {
     "crypto-js": "^4.2.0",
     "dayjs": "^1.11.10",
+    "echarts": "^5.4.3",
     "element-plus": "^2.4.4",
     "js-base64": "^3.7.5",
+    "js-cookie": "^3.0.5",
     "pako": "^2.1.0",
     "pinia": "^2.1.7",
     "vue": "^3.3.11",
     "vue-i18n": "^9.9.0",
     "vue-router": "^4.2.5",
-    "vue3-grid-layout-next": "^1.0.6"
+    "vue3-grid-layout-next": "^1.0.6",
+    "vuex": "^4.1.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.40.1",

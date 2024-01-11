@@ -35,6 +35,7 @@
                 :key="item.i">
             <div
               class="hello"
+              @click="handleClick(item.i)"
             >{{item.i}}</div>
         </grid-item>
     </grid-layout>
@@ -48,7 +49,8 @@
 import { ref, watch } from 'vue';
 // import { GridLayout, GridItem } from 'vue-grid-layout';
 import { GridLayout, GridItem } from  'vue3-grid-layout-next'
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
   const layout = ref([
                 {"x":0,"y":0,"w":2,"h":2,"i":"CSS"},
                 {"x":2,"y":0,"w":2,"h":4,"i":"JS"},
@@ -59,7 +61,7 @@ import { GridLayout, GridItem } from  'vue3-grid-layout-next'
                 {"x":0,"y":5,"w":2,"h":5,"i":"REACT"},
                 {"x":2,"y":5,"w":2,"h":5,"i":"PINIA"},
                 {"x":4,"y":5,"w":2,"h":5,"i":"PYHTHON"},
-                {"x":6,"y":3,"w":2,"h":4,"i":"9"},
+                {"x":6,"y":3,"w":2,"h":4,"i":"Visualizer"},
                 {"x":8,"y":4,"w":2,"h":4,"i":"10"},
                 {"x":10,"y":4,"w":2,"h":4,"i":"11"},
                 {"x":0,"y":10,"w":2,"h":5,"i":"12"},
@@ -74,7 +76,14 @@ import { GridLayout, GridItem } from  'vue3-grid-layout-next'
 
   watch(() => layout.value, (newVal, oldVal) => {
       console.log('layout changed', newVal, oldVal)
-  })        
+  })
+  
+  const handleClick = (i: string) => {
+    console.log(i)
+    if(i === 'Visualizer') {
+      router.push('/Visualizer')
+    }
+  }
 </script>
 <style lang="less" scoped>
 

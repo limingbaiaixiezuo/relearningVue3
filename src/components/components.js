@@ -25,3 +25,4 @@ export * from './context-menu';
 export * from './virtual-scroller';
 export * from './breadcrumb';
 export * from './member-surplus';
+export * from './chart/heatmap.tsx';
