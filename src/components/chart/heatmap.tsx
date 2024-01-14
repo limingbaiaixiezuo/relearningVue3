@@ -8,13 +8,15 @@ import { debounce } from './functions/ui';
 import { defineComponent, ref, watch, reactive, nextTick, onMounted, onBeforeUnmount } from 'vue';
 import { clearAllVisualizerLocalStorageData, clearEChartInstance } from './functions/clear';
 import { chartDataCheck } from './functions/validate';
-import { createNameSpace } from '../../utils/mg-utils';
-// import './chart.less';
+// import { createNameSpace } from '@/utils';
+import { createNamespace } from '@/utils';
+import './index.less';
+const [name, bem] = createNamespace('heatmap');
 
-const [prefix] = createNameSpace('heatmap');
+// const [name, bem] = createNamespace('breadcrumb');
 
 export default defineComponent({
-  name: 'NonUniformGridHeatmap',
+  name,
   components: {
     ElEmpty
   },
@@ -26,9 +28,11 @@ export default defineComponent({
   setup(props, { emit, expose }) {
     // eslint-disable-next-line vue/no-setup-props-destructure
     const { resultType, type, i18n } = props.config;
-
     const empty = ref(false);
     const dom = ref<HTMLDivElement>();
+
+    console.log(bem());
+    
 
     const { baseUnit, currentUnit, convertUnit } = useConvertUnit(
       reactive({ unit: 'μm' })
@@ -103,8 +107,14 @@ export default defineComponent({
     const redraw = async() => {
       empty.value = false;
       db.langName = i18n ?? 'en';
-      drawChart(dom.value);
+      // console.log('VChart data .....  开始更新');
+        // console.log(dom.value);
+        // debugger
+      // setTimeout(() => {
+        drawChart(dom.value);
       db.startRAF = false;
+      // }, 2000);
+      
     };
 
     expose({
@@ -125,20 +135,19 @@ export default defineComponent({
       { immediate: false, deep: true }
     );
 
-    const renderChart = () => {
-      
-      return (
-        <div
-          ref={dom}
-          class={prefix}
-        />
-      );
-    };
 
     const renderEmpty = () => {
       return <ElEmpty image-size={200} description='No Data.' />;
     };
-    // return () => (empty.value ? renderEmpty() : renderChart());
-    return () => <div>Hello</div>;
+
+
+    return () => {
+      return (
+        empty.value ? renderEmpty() :  <div
+        ref={dom}
+        class={bem()}
+      />
+      );
+    }
   }
 });

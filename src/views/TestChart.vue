@@ -1,19 +1,22 @@
-    <template>
+  <template>
         <div class="area">
-            <MBNonUniformGridHeatmap
-            ref="chartRef"
-            :config="chartImageMock"
+            <Heatmap
+                ref="chartRef"
+                :config="chartImageMock"
             />
         </div>
   </template>
   <script setup lang="ts">
   import { ref } from 'vue';
-  import MBNonUniformGridHeatmap from '@/components';
+  import { Heatmap } from '@/components';
+//   import { OBreadcrumb } from '@/components/breadcrumb';
   const chartRef = ref('');
   const chartImageMock = {
             type: 'intensity',
             update: false,
             unitConversion: false,
+            resultType: 'FDTD',
+            i18n: 'en',
             option: {
                 dataset: {
                 data: [
@@ -6896,9 +6899,8 @@
   </script>
   <style lang="less" scoped>
   .area {
-    width: 500px;
-   height: 500px;
-   background-color: aqua;
+    width: 100%;
+    height: 100%;
   }
   
   </style>

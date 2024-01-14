@@ -16,7 +16,8 @@ export function useConvertUnit(props) {
   });
 
   const currentUnit = computed(() => {
-    return store.state.configuration.currentUnits[unitType.value];
+    // return store.state.configuration.currentUnits[unitType.value];
+    return 100
   });
 
   return {

@@ -4,9 +4,9 @@
 //   NonUniformGridHeatmap
 // };
 import { withInstall } from '@/utils';
-import _NonUniformGridHeatmap from './heatmap.tsx';
+import _Heatmap from './heatmap.tsx';
 import './index.less';
 
-export const MBNonUniformGridHeatmap = withInstall(_NonUniformGridHeatmap);
-
-export default MBNonUniformGridHeatmap;
+export const Heatmap = withInstall(_Heatmap);
+import './index.less';
+export default Heatmap;

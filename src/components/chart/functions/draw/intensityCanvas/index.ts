@@ -50,7 +50,7 @@ export const intensityByCanvas = (para: any) => {
   const start = performance.now();
   const dom = para.dom;
   db.vChartDom = para.dom;
-  //   console.log(dom, 8888888888);
+    console.log(dom, 8888888888);
   //   if (dom === null) return;
   while (dom.firstChild) {
     dom.removeChild(dom.firstChild);
@@ -250,8 +250,8 @@ export const intensityByCanvas = (para: any) => {
   //   append(dom, zoomTestDiv, zoom.canvas);
 
   // getClickPointCoordinate(dom); // TEST
-  var end = performance.now();
-  //   console.log('performance canvas绘制完成:', end);
+  const end = performance.now();
+    console.log('performance canvas绘制完成:', end);
   db.pTime = end - start;
   //   console.log('绘制全部耗时：' + db.pTime + '毫秒。');
   if (db.rAFID) {

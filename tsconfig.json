@@ -1,32 +1,13 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
-  ],
-  // "compilerOptions": {
-  //   "strictNullChecks": true,
-  //   "types": ["element-plus/global"],
-  //   "baseUrl": ".",
-  //   "paths": {
-  //     "@/*": ["src/*"]
-  //   },
-  //   "jsx": "preserve"
-  // }
   "compilerOptions": {
+    "strictNullChecks": true,
+    "types": ["element-plus/global"],
     "target": "esnext",
     "useDefineForClassFields": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "strict": true,
     "jsx": "preserve",
+    "strict": true,
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
@@ -38,9 +19,8 @@
     "allowJs": true,
     "baseUrl": ".",
     "paths": {
-      // "@mg/*": ["../mg-*"]
       "@/*": ["src/*"]
-    }
+    },
   },
   "include": [
     "src/**/*.ts",
