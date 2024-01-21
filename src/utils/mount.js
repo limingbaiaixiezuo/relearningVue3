@@ -10,7 +10,7 @@ export function mount({el, component, props, append = false}) {
     el.append(container);
   }
   const instance = createVNode(component, props);
-  instance.appContext = globalThis.vueApp._context;
+  instance.appContext = window.vueApp._context;
   render(instance, container);
   return instance.component.proxy;
 }

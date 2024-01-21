@@ -47,9 +47,11 @@
 // import { GridLayout, GridItem } from 'vue-grid-layout';
   // import { GridItem, GridLayout } from 'vue-ts-responsive-grid-layout';
 import { ref, watch } from 'vue';
+// import { mount, unmount } from '@/utils';
 // import { GridLayout, GridItem } from 'vue-grid-layout';
 import { GridLayout, GridItem } from  'vue3-grid-layout-next'
 import { useRouter } from 'vue-router'
+import Loading from '@/views/loading/index.vue'
 const router = useRouter()
   const layout = ref([
                 {"x":0,"y":0,"w":2,"h":2,"i":"CSS"},
@@ -62,7 +64,7 @@ const router = useRouter()
                 {"x":2,"y":5,"w":2,"h":5,"i":"PINIA"},
                 {"x":4,"y":5,"w":2,"h":5,"i":"PYHTHON"},
                 {"x":6,"y":3,"w":2,"h":4,"i":"Visualizer"},
-                {"x":8,"y":4,"w":2,"h":4,"i":"10"},
+                {"x":8,"y":4,"w":2,"h":4,"i":"Loading"},
                 {"x":10,"y":4,"w":2,"h":4,"i":"11"},
                 {"x":0,"y":10,"w":2,"h":5,"i":"12"},
                 {"x":2,"y":10,"w":2,"h":5,"i":"13"},
@@ -77,11 +79,35 @@ const router = useRouter()
   watch(() => layout.value, (newVal, oldVal) => {
       console.log('layout changed', newVal, oldVal)
   })
+
+  const dom = {
+    el: document.querySelector('.layout'),
+    loadInstance: null
+  }
+
+//   const showLoading = (dom: Object) => {
+//     dom.loadInstance = mount({
+//       el: dom.el,
+//       component: Loading,
+//       append: true
+//     });
+// }
+
+// const closeLoading = (dom: any) =>  {
+//   const destroy = () => {
+//     unmount(dom);
+//     dom.loadInstance = null;
+//   };
+//   setTimeout(destroy, 1000);
+// }
   
   const handleClick = (i: string) => {
     console.log(i)
     if(i === 'Visualizer') {
       router.push('/Visualizer')
+    }
+    if(i === 'Loading') {
+      router.push('/Loading')
     }
   }
 </script>

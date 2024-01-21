@@ -10,6 +10,7 @@ declare module 'vue' {
     Alert: typeof import('./src/components/alert/Alert.vue')['default']
     Button: typeof import('./src/components/button/Button.vue')['default']
     ColorDrop: typeof import('./src/components/tag-status-item/ColorDrop.vue')['default']
+    copy: typeof import('./src/components/loading copy/index.vue')['default']
     Dropdown: typeof import('./src/components/dropdown/Dropdown.vue')['default']
     DropdownItem: typeof import('./src/components/dropdown-item/DropdownItem.vue')['default']
     DropdownMenu: typeof import('./src/components/dropdown-menu/DropdownMenu.vue')['default']
