@@ -35,7 +35,7 @@
                 :key="item.i">
             <div
               class="hello"
-              @click="handleClick(item.i)"
+              @dblclick="handleClick(item.i)"
             >{{item.i}}</div>
         </grid-item>
     </grid-layout>
@@ -51,29 +51,33 @@ import { ref, watch } from 'vue';
 // import { GridLayout, GridItem } from 'vue-grid-layout';
 import { GridLayout, GridItem } from  'vue3-grid-layout-next'
 import { useRouter } from 'vue-router'
-import Loading from '@/views/loading/index.vue'
+// import Loading from '@/views/loading/index.vue'
+
+import { useCounterStore } from '@/stores/counter'
+// 可以在组件中的任意位置访问 `store` 变量 ✨
+const counter = useCounterStore()
 const router = useRouter()
   const layout = ref([
-                {"x":0,"y":0,"w":2,"h":2,"i":"CSS"},
-                {"x":2,"y":0,"w":2,"h":4,"i":"JS"},
-                {"x":4,"y":0,"w":2,"h":5,"i":"TS"},
-                {"x":6,"y":0,"w":2,"h":3,"i":"VITE"},
-                {"x":8,"y":0,"w":2,"h":3,"i":"WEBPACK"},
-                {"x":10,"y":0,"w":2,"h":3,"i":"VUE3"},
-                {"x":0,"y":5,"w":2,"h":5,"i":"REACT"},
-                {"x":2,"y":5,"w":2,"h":5,"i":"PINIA"},
-                {"x":4,"y":5,"w":2,"h":5,"i":"PYHTHON"},
+                // {"x":0,"y":0,"w":2,"h":2,"i":"CSS"},
+                // {"x":2,"y":0,"w":2,"h":4,"i":"JS"},
+                // {"x":4,"y":0,"w":2,"h":5,"i":"TS"},
+                // {"x":6,"y":0,"w":2,"h":3,"i":"VITE"},
+                // {"x":8,"y":0,"w":2,"h":3,"i":"WEBPACK"},
+                // {"x":10,"y":0,"w":2,"h":3,"i":"VUE3"},
+                // {"x":0,"y":5,"w":2,"h":5,"i":"REACT"},
+                // {"x":2,"y":5,"w":2,"h":5,"i":"PINIA"},
+                // {"x":4,"y":5,"w":2,"h":5,"i":"PYHTHON"},
                 {"x":6,"y":3,"w":2,"h":4,"i":"Visualizer"},
                 {"x":8,"y":4,"w":2,"h":4,"i":"Loading"},
-                {"x":10,"y":4,"w":2,"h":4,"i":"11"},
-                {"x":0,"y":10,"w":2,"h":5,"i":"12"},
-                {"x":2,"y":10,"w":2,"h":5,"i":"13"},
-                {"x":4,"y":8,"w":2,"h":4,"i":"14"},
-                {"x":6,"y":8,"w":2,"h":4,"i":"15"},
-                {"x":8,"y":10,"w":2,"h":5,"i":"16"},
-                {"x":10,"y":4,"w":2,"h":2,"i":"17"},
-                {"x":0,"y":9,"w":2,"h":3,"i":"18"},
-                {"x":2,"y":6,"w":2,"h":2,"i":"19"}
+                {"x":10,"y":4,"w":2,"h":4,"i":"Directive"},
+                {"x":0,"y":10,"w":2,"h":5,"i":`${counter.count}`},
+                // {"x":2,"y":10,"w":2,"h":5,"i":"13"},
+                // {"x":4,"y":8,"w":2,"h":4,"i":"14"},
+                // {"x":6,"y":8,"w":2,"h":4,"i":"15"},
+                // {"x":8,"y":10,"w":2,"h":5,"i":"16"},
+                // {"x":10,"y":4,"w":2,"h":2,"i":"17"},
+                // {"x":0,"y":9,"w":2,"h":3,"i":"18"},
+                // {"x":2,"y":6,"w":2,"h":2,"i":"19"}
             ])
 
   watch(() => layout.value, (newVal, oldVal) => {
@@ -108,6 +112,9 @@ const router = useRouter()
     }
     if(i === 'Loading') {
       router.push('/Loading')
+    }
+    if(i === 'Directive') {
+      router.push('/Directive')
     }
   }
 </script>
